@@ -7,8 +7,7 @@ async def upgrade(db: BaseDBAsyncClient) -> str:
     "id" SERIAL NOT NULL PRIMARY KEY,
     "cargo_type" VARCHAR(64) NOT NULL,
     "rate" DOUBLE PRECISION NOT NULL,
-    "date" DATE NOT NULL,
-    CONSTRAINT "uid_cargo_cargo_t_c87b9d" UNIQUE ("cargo_type", "date")
+    "date" DATE NOT NULL
 );
 CREATE TABLE IF NOT EXISTS "aerich" (
     "id" SERIAL NOT NULL PRIMARY KEY,
