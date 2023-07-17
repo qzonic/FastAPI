@@ -166,7 +166,13 @@ asyncio.run(calc_price(url))
   "declared_value": 100.0, 
   "result": 4.0
 }
-
 ```
+
+# Тесты:
+В проете написаны тесты, использую библиотеки pytest и pytest-asyncio. Для запуска тестов необходимо приписать:
+```
+docker-compose exec web pytest
+```
+
 ### Автор
 [![telegram](https://img.shields.io/badge/Telegram-Join-blue)](https://t.me/qzonic)
