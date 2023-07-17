@@ -169,7 +169,7 @@ asyncio.run(calc_price(url))
 ```
 
 # Тесты:
-В проете написаны тесты, использую библиотеки pytest и pytest-asyncio. Для запуска тестов необходимо приписать:
+В проете написаны тесты, используя библиотеки pytest и pytest-asyncio. Для запуска тестов необходимо приписать:
 ```
 docker-compose exec web pytest
 ```
