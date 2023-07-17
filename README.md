@@ -1,5 +1,5 @@
 # Стек
-<img src="https://img.shields.io/badge/Python-4169E1?style=for-the-badge"/> <img src="https://img.shields.io/badge/FastAPI-419284?style=for-the-badge"/> <img src="https://img.shields.io/badge/Docker-00BFFF?style=for-the-badge"/> <img src="https://img.shields.io/badge/PostgreSQL-87CEEB?style=for-the-badge"/><img src="https://img.shields.io/badge/TourtoiseORM-4350af?style=for-the-badge"/>
+<img src="https://img.shields.io/badge/Python-4169E1?style=for-the-badge"/> <img src="https://img.shields.io/badge/FastAPI-419284?style=for-the-badge"/> <img src="https://img.shields.io/badge/Docker-00BFFF?style=for-the-badge"/> <img src="https://img.shields.io/badge/PostgreSQL-87CEEB?style=for-the-badge"/> <img src="https://img.shields.io/badge/TourtoiseORM-4350af?style=for-the-badge"/>
 
 # Описание проекта:
 
@@ -31,17 +31,17 @@ cd FastAPI/
 
 В директории FastAPI нужно создать .env файл, в котором указывается следующее:
 ```
-DB_NAME=postgres
-DB_USER=postgres
-DB_PASS=postgres[.env](..%2FFlyCode%2F.env)
-DB_HOST=db
-DB_PORT=5432
+DB_NAME=
+DB_USER=
+DB_PASS=
+DB_HOST=db # это оставляем
+DB_PORT=
 
-DB_NAME_TEST=test
-DB_USER_TEST=postgres
-DB_PASS_TEST=postgres
-DB_HOST_TEST=db
-DB_PORT_TEST=5432
+DB_NAME_TEST=
+DB_USER_TEST=
+DB_PASS_TEST=
+DB_HOST_TEST=test_db # это оставляем
+DB_PORT_TEST=
 ```
 
 *Теперь необходимо собрать Docker-контейнеры:*
@@ -51,7 +51,7 @@ docker-compose up -d
 
 *После сборки контейнеров, нужно прописать следующие команды по очереди:*
 ```
-docker-compose exec web aerich init
+docker-compose exec web aerich init -t src.settings.DATABASE_CONFIG
 ```
 
 ```
