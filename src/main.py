@@ -31,6 +31,7 @@ async def upload(file: UploadFile = File()):
     for date_key in json_file:
         try:
             _date = datetime.strptime(date_key, '%Y-%m-%d')
+            _date = date(_date.year, _date.month, 1)
             for item in json_file[date_key]:
                 item['date'] = _date
                 cargo_scheme = UploadCargo(**item)
