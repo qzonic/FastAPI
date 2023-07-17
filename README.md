@@ -38,13 +38,13 @@ DB_NAME=
 DB_USER=
 DB_PASS=
 DB_HOST=db # это оставляем
-DB_PORT=
+DB_PORT=5432 # это оставляем
 
 DB_NAME_TEST=
 DB_USER_TEST=
 DB_PASS_TEST=
 DB_HOST_TEST=test_db # это оставляем
-DB_PORT_TEST=
+DB_PORT_TEST=5432 # это оставляем
 ```
 
 *Теперь необходимо собрать Docker-контейнеры:*
